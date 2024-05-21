@@ -5,11 +5,11 @@
   "main": "js/main.js",
   "type": "module",
   "scripts": {    
-    "server" : "json-server ./js/db/api.json --port 5371",
-    "close" : "fuser -k 5001/tcp",
-    "start-all": "npm run clients & npm run employees & npm run gama & npm run offices & npm run payments & npm run products & npm run request_details & npm run requests",
+    "server" : "json-server ./js/db/api.json --port 5379",
+    "close" : "fuser -k 5379/tcp",
+    "start-all": "npm run clients & npm run employees",
     "dev": "node --watch js/main.js",
-    "api": "json-server -h 172.16.101.146 js/db/requests.json -p 5378"
+    "abrigos": "json-server -h 172.16.101.146 js/db/abrigos.json -p 5379"
   },
   "keywords": [],
   "author": "",
