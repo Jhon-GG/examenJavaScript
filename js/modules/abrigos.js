@@ -10,15 +10,16 @@ class AbrigosData extends HTMLElement{
     }
 
     async loadArticles(index){
-        const url = `http://172.16.101.146:5999/abrigo`;
+        const url = `http://172.16.101.146:5999/abrigo?id=1`;
 
         try {
-            const response = await fetch(url, options);
+            const response = await fetch(url);
             const result = await response.json();
 
+
             if (result.albums.items.length > index) {
-                const albumData = result.albums.items[index].data;
-                if (albumData && albumData.coverArt && albumData.coverArt.sources.length > 0) {
+                const articlesData = result.articles.items[index].data;
+                if (articlesData ==  result) {
                     const img = imagen;
                     const name = nombre;
                     const price = precio;

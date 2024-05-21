@@ -284,6 +284,7 @@
     border-bottom-left-radius: 4%;
     border-bottom-right-radius: 4%;
     background: var(--color-opacity);
+    margin-bottom: -5.5%;
 }
 
 .main__img14__texto p{
